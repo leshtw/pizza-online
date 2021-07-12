@@ -33,9 +33,9 @@ $(form).change(function (e) {
 
     let pizzaText = pizza.options[pizza.selectedIndex];
     $(".pizza__name").text(pizzaText.text);
-    let sizeText = size.options[pizza.selectedIndex];
+    let sizeText = size.options[size.selectedIndex];
     $(".size__name").text(sizeText.text);
-    let soysText = soys.options[pizza.selectedIndex];
+    let soysText = soys.options[soys.selectedIndex];
     $(".soys__name").text(soysText.text);
 
 
