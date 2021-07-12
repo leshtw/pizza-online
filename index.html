@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Rubik:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__name">Pizza Online</div>
+    </header>
+
+    <main class="main">
+        <div class="form__content">
+            <div class="form__conten-pizza">
+                <span>Пицца:</span>
+                <select class="chosen" id="pizza" name="pizza">
+                    <option value="0">--Выберите </option>
+                    <option value="1">Пепперони</option>
+                    <option value="2">Деревенская</option>
+                    <option value="3">Гавайская</option>
+                    <option value="4">Грибная</option>
+                </select>
+            </div>
+            <div class="form__conten-size">
+                <span>Размер:</span>
+                <select  class="chosen" id="size" name="size" disabled>
+                    <option value="0">--Выберите</option>
+                    <option value="1">21</option>
+                    <option value="2">26</option>
+                    <option value="3">31</option>
+                    <option value="4">45</option>
+                </select>
+            </div>
+            <div class="form__conten-soys">
+                <span>Соус:</span>
+                <select  class="chosen"  id="soys" name="soys" disabled>
+                    <option value="0">--Выберите</option>
+                    <option value="1">сырный</option>
+                    <option value="2">кисло-сладкий</option>
+                    <option value="3">чесночный</option>
+                    <option value="4">барбекю</option>
+                </select>
+            </div>
+            <div class="modal-price">
+                <p class="price__title">Цена:</p>
+                <p class="price__name-main"></p>
+            </div>
+            <p><input class="order" type="submit" value="Заказать"></p>
+        </div>
+        <div id="dialog-confirm" class="modal" title="Чек" >
+            <h2 class="modal-title"><span class="fontawesome-lock"></span>Заказ</h2>
+            <form class="modal-form">
+                <div class="modal-content">
+                    <div class="modal-pizza">
+                        <p class="pizza__title">Пицца:</p>
+                        <p class="pizza__name"></p>
+                    </div>
+
+                    <div class="modal-size">
+                        <p class="size__title">Размер:</p>
+                        <p class="size__name"></p>
+                    </div>
+
+                    <div class="modal-soys">
+                        <p class="pizza__title">Соус:</p>
+                        <p class="soys__name"></p>
+                    </div>
+
+                    <div class="modal-price">
+                        <p class="price__title">Цена:</p>
+                        <p class="price__name"></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <div class="overlay" id="overlay-modal"></div>
+    <script defer src="script.js"></script>
+</body>
+
+</html>

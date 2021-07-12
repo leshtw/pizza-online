@@ -1,0 +1,157 @@
+
+$white: #FCFCFC;
+$black: #0B0B0B;
+$dark-blue: #080029;
+$blue: #0F0049;
+$super-ligth-gray: #D3D3D3;
+$dark:#181818;
+$light-blue: #609FFF;
+$wight-blue: #D9E8FF;
+$gray: #747474;
+$hard-blue: #3888FF;
+
+@mixin h1 {
+    font: {
+        family: 'Merriweather';
+        style: normal;
+        weight: 700;
+        size: 5.4rem;
+    }
+
+    line-height: 106px;
+
+    }
+    @mixin btn {
+        font: {
+            family: 'Rubik';
+            size: 1.8rem;
+            weight: 500;
+        }
+
+        line-height: 21.33px;
+    }
+
+    @mixin subscription {
+        font: {
+            family: 'Rubik';
+            style: normal;
+            weight: 500;
+            size: 1.8rem;
+        }
+
+        line-height: 23.2px;
+
+    }
+    .form__content{
+        height: 400px;
+    }
+
+.modal{
+    opacity: 0;
+    &-title{
+        padding-bottom: 62px;
+
+    }
+
+    &-pizza, &-size, &-soys, &-price {
+        display: flex;
+        padding-bottom: 10px;
+    }
+}
+
+ .modal.active,
+ .overlay.active{
+    opacity: 1;
+    visibility: visible;
+ }
+
+ :root {
+    font-size: 10px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    padding: 0;
+    margin: 0;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ .main {
+     background-color: $hard-blue;
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+    margin: 0 auto;
+  align-items: center;
+  height: 100%;
+
+}
+.header{
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: center;
+    background-color: $wight-blue;
+
+    &__name{
+        @include h1;
+    }
+}
+
+.form__content {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include subscription;
+    margin-top: 163px;
+    border: 1px solid;
+    padding: 40px;
+    border-radius: 33.2px;
+    & > div{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+}
+
+p .order-bottom{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 66px;
+    font-family: 'Rubik';
+    font-size: 18px;
+    font-weight: 500;
+    color: #F7F7F7;
+    background-color: #164869;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.order {
+
+    width: 300px;
+    height: 66px;
+    font-family: 'Rubik';
+    font-size: 18px;
+    font-weight: 500;
+    color: #F7F7F7;
+    background-color: #d3d3d3;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.registrActive {
+    background-color: #171717;
+    cursor: pointer;
+}
